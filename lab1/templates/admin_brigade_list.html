@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+{% load i18n %}
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>{% trans "Brigades list" %}</title>
+    </head>
+    <body>
+        <h1>{% trans "Brigades list" %}</h1>
+        <a href="http://127.0.0.1:8000/{% trans "en" %}/brigade_add/">{% trans "Add brigade" %}</a>
+        <table>
+            <thead>
+                <tr>
+                    <td>{% trans "ID" %}</td>
+                    <td>{% trans "Name" %}</td>
+                </tr>
+            </thead>
+            <tbody>
+                {% for b in bris %}
+                    <tr>
+                        <td>{{ b.id }}</td>
+                        <td>{{ b }}</td>
+                        <td><a href="http://127.0.0.1:8000/{% trans "en" %}/brigade_edit/?id={{ b.id }}">{% trans "Edit" %}</a></td>
+                        <td><a href="http://127.0.0.1:8000/{% trans "en" %}/brigade_save/?action=delete&id={{ b.id }}">{% trans "Delete" %}</a></td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </body>
+</html>

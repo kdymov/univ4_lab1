@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+{% load i18n %}
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>{% trans "Worker types list" %}</title>
+    </head>
+    <body>
+        <h1>{% trans "Worker types list" %}</h1>
+        <a href="http://127.0.0.1:8000/{% trans "en" %}/wt_add/">{% trans "Add worker type" %}</a>
+        <table>
+            <thead>
+                <tr>
+                    <td>{% trans "ID" %}</td>
+                    <td>{% trans "Name" %}</td>
+                </tr>
+            </thead>
+            <tbody>
+                {% for wt in wts %}
+                    <tr>
+                        <td>{{ wt.id }}</td>
+                        <td>{{ wt }}</td>
+                        <td><a href="http://127.0.0.1:8000/{% trans "en" %}/wt_edit/?id={{ wt.id }}">{% trans "Edit" %}</a></td>
+                        <td><a href="http://127.0.0.1:8000/{% trans "en" %}/wt_save/?action=delete&id={{ wt.id }}">{% trans "Delete" %}</a></td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </body>
+</html>

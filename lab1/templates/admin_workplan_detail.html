@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+{% load i18n %}
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>{% trans "Workplan detail" %}</title>
+    </head>
+    <body>
+        <h1>{% trans "Workplan detail" %}</h1>
+        <form action="http://127.0.0.1:8000/{% trans "en" %}/workplan_save/?action={{ act }}" method="post">
+            {% if id %}
+                <input type="hidden" value="{{ id }}" name="wpid" />
+            {% endif %}
+            <p>{% trans "Task" %}</p>
+            <select name="task">
+                {% for t in ts %}
+                    {% if t.id == sel.task.id %}
+                        <option value="{{ t.id }}" selected>{{ t }}</option>
+                    {% else %}
+                        <option value="{{ t.id }}">{{ t }}</option>
+                    {% endif %}
+                {% endfor %}
+            </select><br />
+            <p>{% trans "Brigade" %}</p>
+            <select name="brigade">
+                {% for b in bs %}
+                    {% if b.id == sel.b.id %}
+                        <option value="{{ b.id }}" selected>{{ b }}</option>
+                    {% else %}
+                        <option value="{{ b.id }}">{{ b }}</option>
+                    {% endif %}
+                {% endfor %}
+            </select><br />
+            <input name="date" type="date" placeholder="{% trans "Date of completion" %}" />
+            <input type="submit" value="{% trans "Save" %}" />
+        </form>
+    </body>
+</html>

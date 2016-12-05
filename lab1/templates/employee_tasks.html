@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+{% load i18n %}
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>{% trans "Tasks list" %}</title>
+        <style>
+            .col {
+                width: 49%;
+            }
+            .left-col {
+                float: left;
+            }
+            .right-col {
+                float: right;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>{% trans "My tasks" %}</h1>
+        <div class="col left-col">
+            <ul>
+                {% for task in tasks %}
+                    {% if not task.is_completed %}
+                        <li>{{ task }}</li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+        </div>
+    </body>
+</html>

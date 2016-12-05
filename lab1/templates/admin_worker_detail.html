@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+{% load i18n %}
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>{% trans "Worker detail" %}</title>
+    </head>
+    <body>
+        <h1>{% trans "Worker detail" %}</h1>
+        <form action="http://127.0.0.1:8000/{% trans "en" %}/worker_save/?action={{ act }}" method="post">
+            {% if id %}
+                <input type="hidden" value="{{ id }}" name="wid" />
+            {% endif %}
+            <p>{% trans "Specialization" %}</p>
+            <select name="spec">
+                {% for t in wt %}
+                    {% if t.name == sel.type.name %}
+                        <option value="{{ t.name }}" selected>{{ t.name }}</option>
+                    {% else %}
+                        <option value="{{ t.name }}">{{ t.name }}</option>
+                    {% endif %}
+                {% endfor %}
+            </select>
+            <input type="text" value="{{ sel.name.username }}" name="wname" readonly required /><br />
+            <input type="submit" value="{% trans "Save" %}" />
+        </form>
+    </body>
+</html>

@@ -1,0 +1,334 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-12-05 15:48+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
+"%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: .\templates\add_task.html:6 .\templates\add_task.html:58
+msgid "Add task"
+msgstr ""
+
+#: .\templates\add_task.html:52 .\templates\menu.html:58
+msgid "Add new task"
+msgstr ""
+
+#: .\templates\add_task.html:53 .\templates\admin_brigade_detail.html:10
+#: .\templates\admin_brigade_list.html:10
+#: .\templates\admin_brigade_list.html:23
+#: .\templates\admin_brigade_list.html:24 .\templates\admin_menu.html:58
+#: .\templates\admin_menu.html:59 .\templates\admin_menu.html:60
+#: .\templates\admin_menu.html:61 .\templates\admin_menu.html:62
+#: .\templates\admin_menu.html:63 .\templates\admin_menu.html:64
+#: .\templates\admin_user_detail.html:10 .\templates\admin_user_list.html:10
+#: .\templates\admin_user_list.html:28 .\templates\admin_user_list.html:29
+#: .\templates\admin_worker_detail.html:10
+#: .\templates\admin_worker_list.html:10 .\templates\admin_worker_list.html:23
+#: .\templates\admin_worker_list.html:24
+#: .\templates\admin_workertype_detail.html:10
+#: .\templates\admin_workertype_list.html:10
+#: .\templates\admin_workertype_list.html:23
+#: .\templates\admin_workertype_list.html:24
+#: .\templates\admin_workplan_detail.html:10
+#: .\templates\admin_workplan_list.html:10
+#: .\templates\admin_workplan_list.html:23
+#: .\templates\admin_workplan_list.html:24 .\templates\employee_menu.html:58
+#: .\templates\employee_menu.html:59 .\templates\index.html:45
+#: .\templates\index.html:46 .\templates\login.html:53
+#: .\templates\logout.html:45 .\templates\logout.html:46
+#: .\templates\menu.html:58 .\templates\menu.html:59 .\templates\menu.html:60
+#: .\templates\register.html:53
+msgid "en"
+msgstr "ru"
+
+#: .\templates\add_task.html:55
+msgid "Short name"
+msgstr "Короткое имя"
+
+#: .\templates\add_task.html:56
+msgid "Description"
+msgstr "Описание"
+
+#: .\templates\add_task.html:57
+msgid "Address"
+msgstr "Адрес"
+
+#: .\templates\admin_brigade_detail.html:6
+#: .\templates\admin_brigade_detail.html:9
+msgid "Brigade detail"
+msgstr "Бригада: подробно"
+
+#: .\templates\admin_brigade_detail.html:14
+msgid "Member 1"
+msgstr "1й член бригады"
+
+#: .\templates\admin_brigade_detail.html:24
+msgid "Member 2"
+msgstr "2й член бригады"
+
+#: .\templates\admin_brigade_detail.html:34
+msgid "Member 3"
+msgstr "3й член бригады"
+
+#: .\templates\admin_brigade_detail.html:44
+#: .\templates\admin_user_detail.html:24
+#: .\templates\admin_worker_detail.html:25
+#: .\templates\admin_workertype_detail.html:15
+#: .\templates\admin_workplan_detail.html:35
+msgid "Save"
+msgstr "Сохранить"
+
+#: .\templates\admin_brigade_list.html:6 .\templates\admin_brigade_list.html:9
+msgid "Brigades list"
+msgstr "Бригада: список"
+
+#: .\templates\admin_brigade_list.html:10
+msgid "Add brigade"
+msgstr "Добавить бригаду"
+
+#: .\templates\admin_brigade_list.html:14 .\templates\admin_user_list.html:14
+#: .\templates\admin_worker_list.html:14
+#: .\templates\admin_workertype_list.html:14
+#: .\templates\admin_workplan_list.html:14
+msgid "ID"
+msgstr "№"
+
+#: .\templates\admin_brigade_list.html:15 .\templates\admin_worker_list.html:15
+#: .\templates\admin_workertype_list.html:15
+#: .\templates\admin_workplan_list.html:15
+msgid "Name"
+msgstr "Имя"
+
+#: .\templates\admin_brigade_list.html:23 .\templates\admin_user_list.html:28
+#: .\templates\admin_worker_list.html:23
+#: .\templates\admin_workertype_list.html:23
+#: .\templates\admin_workplan_list.html:23
+msgid "Edit"
+msgstr "Редактировать"
+
+#: .\templates\admin_brigade_list.html:24 .\templates\admin_user_list.html:29
+#: .\templates\admin_worker_list.html:24
+#: .\templates\admin_workertype_list.html:24
+#: .\templates\admin_workplan_list.html:24
+msgid "Delete"
+msgstr "Удалить"
+
+#: .\templates\admin_menu.html:6
+msgid "Admin menu"
+msgstr "Меню администратора"
+
+#: .\templates\admin_menu.html:57 .\templates\employee_menu.html:57
+#: .\templates\menu.html:57
+msgid "Hello"
+msgstr "Добро пожаловать"
+
+#: .\templates\admin_menu.html:58
+#, fuzzy
+#| msgid "Username"
+msgid "User"
+msgstr "Пользователи"
+
+#: .\templates\admin_menu.html:59
+msgid "Worker types"
+msgstr "Специальности"
+
+#: .\templates\admin_menu.html:60
+msgid "Workers"
+msgstr "Работники"
+
+#: .\templates\admin_menu.html:61
+msgid "Brigades"
+msgstr "Бригады"
+
+#: .\templates\admin_menu.html:62
+msgid "Work plans"
+msgstr "Планы работ"
+
+#: .\templates\admin_menu.html:63 .\templates\admin_record_list.html:6
+msgid "System log"
+msgstr "Системный журнал"
+
+#: .\templates\admin_menu.html:64 .\templates\employee_menu.html:59
+#: .\templates\logout.html:6 .\templates\menu.html:60
+msgid "Log out"
+msgstr "Выйти"
+
+#: .\templates\admin_record_list.html:9
+msgid "Record list"
+msgstr "Список записей журнала"
+
+#: .\templates\admin_user_detail.html:6 .\templates\admin_user_detail.html:9
+msgid "User detail"
+msgstr "Пользователь: подробно"
+
+#: .\templates\admin_user_detail.html:14 .\templates\admin_user_list.html:15
+#: .\templates\login.html:55 .\templates\register.html:55
+msgid "Username"
+msgstr "Логин"
+
+#: .\templates\admin_user_detail.html:17
+msgid "Type"
+msgstr "Тип"
+
+#: .\templates\admin_user_list.html:6 .\templates\admin_user_list.html:9
+msgid "Users list"
+msgstr "Пользователь: список"
+
+#: .\templates\admin_user_list.html:10
+msgid "Add user"
+msgstr "Добавить пользователя"
+
+#: .\templates\admin_user_list.html:17
+msgid "Group"
+msgstr "Группа"
+
+#: .\templates\admin_worker_detail.html:6
+#: .\templates\admin_worker_detail.html:9
+msgid "Worker detail"
+msgstr "Работник: подробно"
+
+#: .\templates\admin_worker_detail.html:14
+msgid "Specialization"
+msgstr "Специализация"
+
+#: .\templates\admin_worker_list.html:6 .\templates\admin_worker_list.html:9
+msgid "Workers list"
+msgstr "Работник: список"
+
+#: .\templates\admin_worker_list.html:10
+msgid "Add worker"
+msgstr "Добавить работника"
+
+#: .\templates\admin_workertype_detail.html:6
+#: .\templates\admin_workertype_detail.html:9
+msgid "Worker type detail"
+msgstr "Специальность: подробно"
+
+#: .\templates\admin_workertype_detail.html:14
+#, fuzzy
+#| msgid "Username"
+msgid "Worker name"
+msgstr "Имя работника"
+
+#: .\templates\admin_workertype_list.html:6
+#: .\templates\admin_workertype_list.html:9
+msgid "Worker types list"
+msgstr "Специальность: список"
+
+#: .\templates\admin_workertype_list.html:10
+msgid "Add worker type"
+msgstr "Добавить специальность"
+
+#: .\templates\admin_workplan_detail.html:6
+#: .\templates\admin_workplan_detail.html:9
+msgid "Workplan detail"
+msgstr "План работ: подробно"
+
+#: .\templates\admin_workplan_detail.html:14
+msgid "Task"
+msgstr "Задание"
+
+#: .\templates\admin_workplan_detail.html:24
+msgid "Brigade"
+msgstr "Бригада"
+
+#: .\templates\admin_workplan_detail.html:34
+msgid "Date of completion"
+msgstr "Дата выполнения"
+
+#: .\templates\admin_workplan_list.html:6
+#: .\templates\admin_workplan_list.html:9
+msgid "Workplans list"
+msgstr "План работ: список"
+
+#: .\templates\admin_workplan_list.html:10
+msgid "Add workplan"
+msgstr "Добавить план работ"
+
+#: .\templates\employee_menu.html:6
+msgid "Employee menu"
+msgstr "Меню работника"
+
+#: .\templates\employee_menu.html:58
+msgid "View my tasks"
+msgstr "Мои задания"
+
+#: .\templates\employee_tasks.html:6
+msgid "Tasks list"
+msgstr "Список заданий"
+
+#: .\templates\employee_tasks.html:20
+msgid "My tasks"
+msgstr "Мои задания"
+
+#: .\templates\index.html:6
+msgid "Index"
+msgstr "Главная"
+
+#: .\templates\index.html:44
+msgid "Home service web page"
+msgstr "Веб-страница сервиса обслуживания домов"
+
+#: .\templates\index.html:45 .\templates\login.html:6 .\templates\login.html:57
+#: .\templates\logout.html:45
+msgid "Sign in"
+msgstr "Вход"
+
+#: .\templates\index.html:46 .\templates\logout.html:46
+msgid "Join us"
+msgstr "Регистрация"
+
+#: .\templates\list_tasks.html:6 .\templates\list_tasks.html:20
+msgid "Your tasks"
+msgstr "Ваши задания"
+
+#: .\templates\list_tasks.html:22
+msgid "All tasks"
+msgstr "Все задания"
+
+#: .\templates\list_tasks.html:30
+msgid "Workplans"
+msgstr "Планы работ"
+
+#: .\templates\login.html:52
+msgid "Sign in form"
+msgstr "Форма входа"
+
+#: .\templates\login.html:56 .\templates\register.html:57
+msgid "Password"
+msgstr "Пароль"
+
+#: .\templates\logout.html:44
+msgid "Thank you for visiting us!"
+msgstr "Спасибо, что посетили наш сайт"
+
+#: .\templates\menu.html:6
+msgid "Client menu"
+msgstr "Меню клиента"
+
+#: .\templates\menu.html:59
+msgid "Task status"
+msgstr "Статус заданий"
+
+#: .\templates\register.html:6 .\templates\register.html:58
+msgid "Register"
+msgstr "Регистрация"
+
+#: .\templates\register.html:52
+msgid "Register form"
+msgstr "Форма регистрации"

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+{% load i18n %}
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>{% trans "Brigade detail" %}</title>
+    </head>
+    <body>
+        <h1>{% trans "Brigade detail" %}</h1>
+        <form action="http://127.0.0.1:8000/{% trans "en" %}/brigade_save/?action={{ act }}" method="post">
+            {% if id %}
+                <input type="hidden" value="{{ id }}" name="bid" />
+            {% endif %}
+            <p>{% trans "Member 1" %}</p>
+            <select name="mem1">
+                {% for w in ws %}
+                    {% if w.name.username == sel.member1.name.username %}
+                        <option value="{{ w.id }}" selected>{{ w }}</option>
+                    {% else %}
+                        <option value="{{ w.id }}">{{ w }}</option>
+                    {% endif %}
+                {% endfor %}
+            </select><br />
+            <p>{% trans "Member 2" %}</p>
+            <select name="mem2">
+                {% for w in ws %}
+                    {% if w.name.username == sel.member2.name.username %}
+                        <option value="{{ w.id }}" selected>{{ w }}</option>
+                    {% else %}
+                        <option value="{{ w.id }}">{{ w }}</option>
+                    {% endif %}
+                {% endfor %}
+            </select><br />
+            <p>{% trans "Member 3" %}</p>
+            <select name="mem3">
+                {% for w in ws %}
+                    {% if w.name.username == sel.member3.name.username %}
+                        <option value="{{ w.id }}" selected>{{ w }}</option>
+                    {% else %}
+                        <option value="{{ w.id }}">{{ w }}</option>
+                    {% endif %}
+                {% endfor %}
+            </select><br />
+            <input type="submit" value="{% trans "Save" %}" />
+        </form>
+    </body>
+</html>

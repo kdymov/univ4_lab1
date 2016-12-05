@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+{% load i18n %}
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>{% trans "Sign in" %}</title>
+        <style>
+            body {
+                text-align: center;
+            }
+
+            .wrapper {
+                background-color: rgba(141, 255, 228, 0.5);
+                border: 3px solid #329fcd;
+                border-radius: 10px;
+                padding: 30px;
+                display: inline-block;
+                margin-top: 175px;
+            }
+
+            h1 {
+                font-family: 'Roboto', sans-serif;
+                font-weight: normal;
+                margin-top: 0;
+                margin-bottom: 30px;
+            }
+
+            .link-btn {
+                background-color: #329fcd;
+                border: 1px solid #3b6fc4;
+                border-radius: 10px;
+                color: white;
+                padding: 10px 20px;
+                margin: 25px;
+                margin-bottom: 10px;
+                text-decoration: none;
+                text-transform: uppercase;
+                font-family: 'Roboto', sans-serif;
+            }
+
+            .field {
+                padding: 10px 7px;
+                border: 0;
+                border-radius: 5px;
+                margin: 10px;
+                display: block;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="wrapper">
+            <h1>{% trans "Sign in form" %}</h1>
+            <form action="http://127.0.0.1:8000/{% trans "en" %}/menu/" method="POST">
+                {% csrf_token %}
+                <input class="field" type="text" name="username" placeholder="{% trans "Username" %}" maxlength="30" required />
+                <input class="field" type="password" name="password" placeholder="{% trans "Password" %}" maxlength="30" required />
+                <input class="link-btn" type="submit" value="{% trans "Sign in" %}" />
+            </form>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+{% load i18n %}
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>{% trans "Users list" %}</title>
+    </head>
+    <body>
+        <h1>{% trans "Users list" %}</h1>
+        <a href="http://127.0.0.1:8000/{% trans "en" %}/user_add/">{% trans "Add user" %}</a>
+        <table>
+            <thead>
+                <tr>
+                    <td>{% trans "ID" %}</td>
+                    <td>{% trans "Username" %}</td>
+                    <td>E-mail</td>
+                    <td>{% trans "Group" %}</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </thead>
+            <tbody>
+                {% for u in users %}
+                    <tr>
+                        {% for param in u %}
+                            <td>{{ param }}</td>
+                        {% endfor %}
+                        <td><a href="http://127.0.0.1:8000/{% trans "en" %}/user_edit/?id={{ u.0 }}">{% trans "Edit" %}</a></td>
+                        <td><a href="http://127.0.0.1:8000/{% trans "en" %}/user_save/?action=delete&id={{ u.0 }}">{% trans "Delete" %}</a></td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </body>
+</html>

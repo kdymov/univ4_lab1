@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+{% load i18n %}
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>{% trans "Workers list" %}</title>
+    </head>
+    <body>
+        <h1>{% trans "Workers list" %}</h1>
+        <a href="http://127.0.0.1:8000/{% trans "en" %}/worker_add/">{% trans "Add worker" %}</a>
+        <table>
+            <thead>
+                <tr>
+                    <td>{% trans "ID" %}</td>
+                    <td>{% trans "Name" %}</td>
+                </tr>
+            </thead>
+            <tbody>
+                {% for w in workers %}
+                    <tr>
+                        <td>{{ w.id }}</td>
+                        <td>{{ w }}</td>
+                        <td><a href="http://127.0.0.1:8000/{% trans "en" %}/worker_edit/?id={{ w.id }}">{% trans "Edit" %}</a></td>
+                        <td><a href="http://127.0.0.1:8000/{% trans "en" %}/worker_save/?action=delete&id={{ w.id }}">{% trans "Delete" %}</a></td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </body>
+</html>

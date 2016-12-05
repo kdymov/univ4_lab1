@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+{% load i18n %}
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>{% trans "System log" %}</title>
+    </head>
+    <body>
+        <h1>{% trans "Record list" %}</h1>
+        {% for rec in records %}
+            <p>{{ rec }}</p>
+        {% endfor %}
+    </body>
+</html>

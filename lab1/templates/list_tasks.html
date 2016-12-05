@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+{% load i18n %}
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>{% trans "Your tasks" %}</title>
+        <style>
+            .col {
+                width: 49%;
+            }
+            .left-col {
+                float: left;
+            }
+            .right-col {
+                float: right;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>{% trans "Your tasks" %}</h1>
+        <div class="col left-col">
+            <h2>{% trans "All tasks" %}</h2>
+            <ul>
+                {% for task in tasks %}
+                    <li>{{ task }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="col right-col">
+            <h2>{% trans "Workplans" %}</h2>
+            <ul>
+                {% for plan in plans %}
+                    <li>{{ plan }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+{% load i18n %}
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>{% trans "Employee menu" %}</title>
+        <style>
+            body {
+                text-align: center;
+            }
+
+            .wrapper {
+                background-color: rgba(141, 255, 228, 0.5);
+                border: 3px solid #329fcd;
+                border-radius: 10px;
+                padding: 30px;
+                display: inline-block;
+                margin-top: 200px;
+            }
+
+            h1 {
+                font-family: 'Roboto', sans-serif;
+                font-weight: normal;
+                margin-top: 0;
+                margin-bottom: 30px;
+            }
+
+            .link-btn {
+                background-color: #329fcd;
+                border: 1px solid #3b6fc4;
+                border-radius: 10px;
+                color: white;
+                padding: 10px 20px;
+                margin-top: 20px;
+                text-decoration: none;
+                text-transform: uppercase;
+                font-family: 'Roboto', sans-serif;
+                display: block;
+            }
+
+            .out-btn {
+                background-color: #cd3227;
+                border: 1px solid #c4000c;
+                border-radius: 10px;
+                color: white;
+                padding: 10px 20px;
+                margin-top: 20px;
+                text-decoration: none;
+                text-transform: uppercase;
+                font-family: 'Roboto', sans-serif;
+                display: block;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="wrapper">
+            <h1>{% trans "Hello" %}, {{ login }}</h1>
+            <a class="link-btn" href="http://127.0.0.1:8000/{% trans "en" %}/viewEmployeeTasks/">{% trans "View my tasks" %}</a>
+            <a class="out-btn" href="http://127.0.0.1:8000/{% trans "en" %}/logout/">{% trans "Log out" %}</a>
+        </div>
+    </body>
+</html>
