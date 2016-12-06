@@ -4,10 +4,40 @@
     <head>
         <meta charset="UTF-8">
         <title>{% trans "Worker type detail" %}</title>
+        <style>
+            .lang-box {
+                position: fixed;
+                right: 10px;
+                top: 20px;
+            }
+
+            .link-btn {
+                background-color: #329fcd;
+                border: 1px solid #3b6fc4;
+                border-radius: 10px;
+                color: white;
+                padding: 10px 20px;
+                margin: 25px;
+                margin-bottom: 50px;
+                text-decoration: none;
+                text-transform: uppercase;
+                font-family: 'Roboto', sans-serif;
+            }
+        </style>
     </head>
     <body>
+        <div class="lang-box">
+            {% if id %}
+                <a class="link-btn" href="http://127.0.0.1:8000/en/wt_edit/?id={{ id }}">en</a>
+                <a class="link-btn" href="http://127.0.0.1:8000/ru/wt_edit/?id={{ id }}">ru</a>
+            {% else %}
+                <a class="link-btn" href="http://127.0.0.1:8000/en/wt_add/">en</a>
+                <a class="link-btn" href="http://127.0.0.1:8000/ru/wt_add/">ru</a>
+            {% endif %}
+        </div>
         <h1>{% trans "Worker type detail" %}</h1>
-        <form action="http://127.0.0.1:8000/{% trans "en" %}/worker_save/?action={{ act }}" method="post">
+        <a href="http://127.0.0.1:8000/{% trans "en" %}/wt_list/">{% trans "To list" %}</a><br />
+        <form action="http://127.0.0.1:8000/{% trans "en" %}/wt_save/?action={{ act }}" method="post">
             {% if id %}
                 <input type="hidden" value="{{ id }}" name="wtid" />
             {% endif %}

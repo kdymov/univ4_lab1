@@ -9,6 +9,12 @@
                 text-align: center;
             }
 
+            .lang-box {
+                position: fixed;
+                right: 10px;
+                top: 20px;
+            }
+
             .wrapper {
                 background-color: rgba(141, 255, 228, 0.5);
                 border: 3px solid #329fcd;
@@ -48,6 +54,10 @@
         </style>
     </head>
     <body>
+        <div class="lang-box">
+            <a class="link-btn" href="http://127.0.0.1:8000/en/login/">en</a>
+            <a class="link-btn" href="http://127.0.0.1:8000/ru/login/">ru</a>
+        </div>
         <div class="wrapper">
             <h1>{% trans "Sign in form" %}</h1>
             <form action="http://127.0.0.1:8000/{% trans "en" %}/menu/" method="POST">

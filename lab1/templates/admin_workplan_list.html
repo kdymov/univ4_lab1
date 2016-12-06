@@ -4,9 +4,34 @@
     <head>
         <meta charset="UTF-8">
         <title>{% trans "Workplans list" %}</title>
+        <style>
+            .lang-box {
+                position: fixed;
+                right: 10px;
+                top: 20px;
+            }
+
+            .link-btn {
+                background-color: #329fcd;
+                border: 1px solid #3b6fc4;
+                border-radius: 10px;
+                color: white;
+                padding: 10px 20px;
+                margin: 25px;
+                margin-bottom: 50px;
+                text-decoration: none;
+                text-transform: uppercase;
+                font-family: 'Roboto', sans-serif;
+            }
+        </style>
     </head>
     <body>
+        <div class="lang-box">
+            <a class="link-btn" href="http://127.0.0.1:8000/en/workplan_list/">en</a>
+            <a class="link-btn" href="http://127.0.0.1:8000/ru/workplan_list/">ru</a>
+        </div>
         <h1>{% trans "Workplans list" %}</h1>
+        <a href="http://127.0.0.1:8000/{% trans "en" %}/menu/">{% trans "Menu" %}</a><br />
         <a href="http://127.0.0.1:8000/{% trans "en" %}/workplan_add/">{% trans "Add workplan" %}</a>
         <table>
             <thead>
@@ -20,8 +45,10 @@
                     <tr>
                         <td>{{ p.id }}</td>
                         <td>{{ p }}</td>
-                        <td><a href="http://127.0.0.1:8000/{% trans "en" %}/workplan_edit/?id={{ p.id }}">{% trans "Edit" %}</a></td>
-                        <td><a href="http://127.0.0.1:8000/{% trans "en" %}/workplan_save/?action=delete&id={{ p.id }}">{% trans "Delete" %}</a></td>
+                        {% if not p.task.is_completed %}
+                            <td><a href="http://127.0.0.1:8000/{% trans "en" %}/workplan_edit/?id={{ p.id }}">{% trans "Edit" %}</a></td>
+                            <td><a href="http://127.0.0.1:8000/{% trans "en" %}/workplan_save/?action=delete&id={{ p.id }}">{% trans "Delete" %}</a></td>
+                        {% endif %}
                     </tr>
                 {% endfor %}
             </tbody>

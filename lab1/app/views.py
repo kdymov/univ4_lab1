@@ -103,14 +103,34 @@ def employee_tasks(request):
     tasks1 = WorkPlan.objects.filter(brigade__member1__name=request.user)
     tasks2 = WorkPlan.objects.filter(brigade__member2__name=request.user)
     tasks3 = WorkPlan.objects.filter(brigade__member3__name=request.user)
+    t1 = []
     tasks = []
     for t in tasks1:
-        tasks.append(t)
+        t1.append(t)
     for t in tasks2:
         tasks.append(t)
     for t in tasks3:
         tasks.append(t)
-    return HttpResponse(render(request, 'employee_tasks.html', {'user': request.user, 'tasks': tasks}))
+    return HttpResponse(render(request, 'employee_tasks.html', {'user': request.user, 't1': t1, 'tasks': tasks}))
+
+
+def complete_task(request):
+    id = request.GET['id']
+    t = Task.objects.get(id=id)
+    t.is_completed = True
+    t.save()
+    tasks1 = WorkPlan.objects.filter(brigade__member1__name=request.user)
+    tasks2 = WorkPlan.objects.filter(brigade__member2__name=request.user)
+    tasks3 = WorkPlan.objects.filter(brigade__member3__name=request.user)
+    t1 = []
+    tasks = []
+    for t in tasks1:
+        t1.append(t)
+    for t in tasks2:
+        tasks.append(t)
+    for t in tasks3:
+        tasks.append(t)
+    return HttpResponse(render(request, 'employee_tasks.html', {'user': request.user, 't1': t1, 'tasks': tasks}))
 
 
 def admin_user_list(request):

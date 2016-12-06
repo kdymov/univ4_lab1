@@ -25,12 +25,20 @@ class Task(models.Model):
     is_completed = models.BooleanField()
 
     def __str__(self):
-        return "Task %s: %s for %s at %s: %s" % (
-            str(self.id),
-            self.short_name,
-            self.person_name,
-            self.address,
-            self.description)
+        if self.is_completed:
+            return "[COMPLETED] Task %s: %s for %s at %s: %s" % (
+                str(self.id),
+                self.short_name,
+                self.person_name,
+                self.address,
+                self.description)
+        else:
+            return "[TO DO] Task %s: %s for %s at %s: %s" % (
+                str(self.id),
+                self.short_name,
+                self.person_name,
+                self.address,
+                self.description)
 
 
 class Brigade(models.Model):
@@ -48,11 +56,17 @@ class WorkPlan(models.Model):
     date = models.DateField()
 
     def __str__(self):
-        return "Task %s is assigned to brigade %s, it will be completed on %s" % (
-            str(self.task.id),
-            str(self.brigade.id),
-            str(self.date)
-        )
+        if self.task.is_completed:
+            return "Task %s is completed by brigade %s" % (
+                str(self.task.id),
+                str(self.brigade.id)
+            )
+        else:
+            return "Task %s is assigned to brigade %s, it will be completed on %s" % (
+                str(self.task.id),
+                str(self.brigade.id),
+                str(self.date)
+            )
 
 
 class Record(models.Model):

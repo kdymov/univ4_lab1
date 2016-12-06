@@ -9,6 +9,12 @@
                 text-align: center;
             }
 
+            .lang-box {
+                position: fixed;
+                right: 10px;
+                top: 20px;
+            }
+
             .wrapper {
                 background-color: rgba(141, 255, 228, 0.5);
                 border: 3px solid #329fcd;
@@ -48,8 +54,13 @@
         </style>
     </head>
     <body>
+        <div class="lang-box">
+            <a class="link-btn" href="http://127.0.0.1:8000/en/addTaskForm/">en</a>
+            <a class="link-btn" href="http://127.0.0.1:8000/ru/addTaskForm/">ru</a>
+        </div>
         <div class="wrapper">
             <h1>{% trans "Add new task" %}</h1>
+            <a href="http://127.0.0.1:8000/{% trans "en" %}/menu/">{% trans "Menu" %}</a><br />
             <form action="http://127.0.0.1:8000/{% trans "en" %}/addTask/" method="POST">
                 {% csrf_token %}
                 <input class="field" type="text" name="title" placeholder="{% trans "Short name" %}" maxlength="30" required />

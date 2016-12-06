@@ -4,9 +4,39 @@
     <head>
         <meta charset="UTF-8">
         <title>{% trans "Workplan detail" %}</title>
+        <style>
+            .lang-box {
+                position: fixed;
+                right: 10px;
+                top: 20px;
+            }
+
+            .link-btn {
+                background-color: #329fcd;
+                border: 1px solid #3b6fc4;
+                border-radius: 10px;
+                color: white;
+                padding: 10px 20px;
+                margin: 25px;
+                margin-bottom: 50px;
+                text-decoration: none;
+                text-transform: uppercase;
+                font-family: 'Roboto', sans-serif;
+            }
+        </style>
     </head>
     <body>
+        <div class="lang-box">
+            {% if id %}
+                <a class="link-btn" href="http://127.0.0.1:8000/en/workplan_edit/?id={{ id }}">en</a>
+                <a class="link-btn" href="http://127.0.0.1:8000/ru/workplan_edit/?id={{ id }}">ru</a>
+            {% else %}
+                <a class="link-btn" href="http://127.0.0.1:8000/en/workplan_add/">en</a>
+                <a class="link-btn" href="http://127.0.0.1:8000/ru/workplan_add/">ru</a>
+            {% endif %}
+        </div>
         <h1>{% trans "Workplan detail" %}</h1>
+        <a href="http://127.0.0.1:8000/{% trans "en" %}/workplan_list/">{% trans "To list" %}</a><br />
         <form action="http://127.0.0.1:8000/{% trans "en" %}/workplan_save/?action={{ act }}" method="post">
             {% if id %}
                 <input type="hidden" value="{{ id }}" name="wpid" />

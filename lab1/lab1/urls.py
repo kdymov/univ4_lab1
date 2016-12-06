@@ -30,6 +30,7 @@ urlpatterns = i18n_patterns(
     url(r'^addTask/', views.add_task_view),
     url(r'^listTasks/', views.list_tasks_view),
     url(r'^viewEmployeeTasks/', views.employee_tasks),
+    url(r'^complete_task/', views.complete_task),
     url(r'^user_list/', views.admin_user_list),
     url(r'^user_add/', views.admin_user_detail),
     url(r'^user_edit/', views.admin_user_detail),

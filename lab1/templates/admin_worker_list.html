@@ -4,9 +4,34 @@
     <head>
         <meta charset="UTF-8">
         <title>{% trans "Workers list" %}</title>
+        <style>
+            .lang-box {
+                position: fixed;
+                right: 10px;
+                top: 20px;
+            }
+
+            .link-btn {
+                background-color: #329fcd;
+                border: 1px solid #3b6fc4;
+                border-radius: 10px;
+                color: white;
+                padding: 10px 20px;
+                margin: 25px;
+                margin-bottom: 50px;
+                text-decoration: none;
+                text-transform: uppercase;
+                font-family: 'Roboto', sans-serif;
+            }
+        </style>
     </head>
     <body>
+        <div class="lang-box">
+            <a class="link-btn" href="http://127.0.0.1:8000/en/worker_list/">en</a>
+            <a class="link-btn" href="http://127.0.0.1:8000/ru/worker_list/">ru</a>
+        </div>
         <h1>{% trans "Workers list" %}</h1>
+        <a href="http://127.0.0.1:8000/{% trans "en" %}/menu/">{% trans "Menu" %}</a><br />
         <a href="http://127.0.0.1:8000/{% trans "en" %}/worker_add/">{% trans "Add worker" %}</a>
         <table>
             <thead>
